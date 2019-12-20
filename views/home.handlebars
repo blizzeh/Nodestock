@@ -1,2 +1,19 @@
-<h1>Dit is mijn handlebars homepage</h1>
-{{ stuff }}
+<div class="jumbotron">
+  <h1 class="display-4">{{stock.companyName}} ({{stock.symbol}})</h1>
+  <br/>
+  <strong>Prijs: </strong>${{stock.latestPrice}}<br/>
+<strong>Laatste close: </strong>${{stock.previousClose }}<br/>
+<strong>Verandering: </strong>{{stock.changePercent}}%<br/>
+<strong>Market cap: </strong>${{stock.marketCap}}<br/>
+<strong>P/E ratio: </strong>{{stock.peRatio}}<br/>
+<strong>52 week high: </strong>${{stock.week52High}}<br/>
+<strong>52 week low: </strong>${{stock.week52Low}}<br/>
+<strong>YTD verandering: </strong>{{stock.ytdChange}}%<br/>
+</div>
+
+
+<!--
+{{#each stock}}
+    {{@key}} | {{this}}<br/>
+{{/each}}
+-->
